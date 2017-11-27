@@ -1,12 +1,17 @@
-from flask import Flask, render_template, request, session, redirect, url_for
+import os
+from flask import Flask,render_template,request, session, redirect, url_for
 from .forms import SignupForm, LoginForm
 from .models import db, User
 from . import app
+from flask_sqlalchemy import SQLAlchemy
 
-#postgres sq
-postgresql_line = 'postgresql://postgres:xyz123890xyz@localhost:5432/learningflask'
-app.config['SQLALCHEMY_DATABASE_URI'] = postgresql_line
-db.init_app(app)
+#postgres sql
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:xyz123890xyz@localhost:5432/learningflask'
+#db.init_app(app)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://wfibcqxjvbzada:5ea7dff6b2fd7aa8add4fc96326defc8eadbb2a34661e1304a3de08053817567@ec2-54-235-90-125.compute-1.amazonaws.com:5432/d6s3p8sri4ie30'
+db = SQLAlchemy(app)
+
 #secretkey for login
 app.secret_key = 'development-key'
 @app.route("/")
