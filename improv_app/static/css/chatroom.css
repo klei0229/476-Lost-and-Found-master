@@ -58,17 +58,6 @@ float: right;
 footer {
 text-align: center;
 }
-.div_video {
-  border:1px solid black;
-  display: inline-block;
-  margin-left: 14%;
-}
 .streamer_info {
-  border: 1px solid black;
-  display: inline-block;
-
-}
-.div_streamer {
-  border: 1px solid black;
-  margin-top: 3%;;
+  margin-top: 3%;
 }
