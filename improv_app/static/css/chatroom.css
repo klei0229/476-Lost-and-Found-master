@@ -38,6 +38,9 @@ padding: 2px;
     overflow: auto;
     padding: 2px;
 }
+#historyMsg img {
+    max-width: 99%;
+}
 .timespan {
 color: #ddd;
 }
