@@ -53,20 +53,21 @@ padding: 2px;
     padding: 0;
 }
 .imageLable {
-position: relative;
+    position: relative;
 }
+
 #sendImage {
-position: absolute;
-width: 52px;
-left: 0;
-opacity: 0;
-overflow: hidden;
+    position: absolute;
+    width: 52px;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
 }
 #messageInput {
-width: 440px;
-max-width: 440px;
-height: 90px;
-max-height: 90px;
+    width: 440px;
+    max-width: 440px;
+    height: 90px;
+    max-height: 90px;
 }
 #sendBtn {
 width: 50px;
