@@ -92,3 +92,11 @@ text-align: center;
     display: block;
     padding-top: 200px;
 }
+#emojiWrapper {
+    display: none;
+    width: 500px;
+    bottom: 105px;
+    position: absolute;
+    background-color: #aaa;
+    box-shadow: 0 0 10px #555;
+}
