@@ -32,8 +32,11 @@ background-color: #fff;
 overflow: auto;
 padding: 2px;
 }
-#historyMsg img {
-max-width: 99%;
+#historyMsg {
+    height: 400px;
+    background-color: #fff;
+    overflow: auto;
+    padding: 2px;
 }
 .timespan {
 color: #ddd;
