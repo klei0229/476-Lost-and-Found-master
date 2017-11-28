@@ -17,6 +17,10 @@ font-family: sans-serif;
 height: 80px;
 width: 100%;
 }
+.banner p {
+    float: left;
+    display: inline-block;
+}
 historyMsg {
 height: 400px;
 background-color: #fff;
