@@ -61,3 +61,15 @@ text-align: center;
 .streamer_info {
   margin-top: 3%;
 }
+#loginWrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(5, 5, 5, .6);
+    text-align: center;
+    color: #fff;
+    display: block;
+    padding-top: 200px;
+}
