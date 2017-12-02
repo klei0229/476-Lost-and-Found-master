@@ -1,5 +1,5 @@
 #!/bin/sh
-
+#
 set -e
 
 PS_TYPE=$(echo "$DYNO" | cut -d. -f1)
