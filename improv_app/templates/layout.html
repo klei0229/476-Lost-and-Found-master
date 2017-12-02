@@ -64,15 +64,33 @@
         FB.api('/me?fields=name,email', function(response){
           if(response && !response.error){
             //console.log(response);
-            buildProfile(response);
+            //buildProfile(response);
           }
 
           FB.api('/me/feed', function(response){
             if(response && !response.error){
-              buildFeed(response);
+              //buildFeed(response);
             }
           });
         })
+      }
+
+      function logout(){
+        FB.logout(function(response){
+          setElements(false);
+          console.log("User has logged out")
+        });
+      }
+
+      function setElements(isLoggedIn){
+        if(isLoggedIn){
+          document.getElementById('logout').style.display = 'block';
+          document.getElementById('fb-btn').style.display = 'none';
+        } else {
+          document.getElementById('logout').style.display = 'none';
+          document.getElementById('fb-btn').style.display = 'block';
+
+        }
       }
 
 
@@ -136,6 +154,7 @@
 
 
                       <li>
+                          <li><a id="logout" href="#" onclick="logout()">Logout</a></li>
                           <fb:login-button
                             id="fb-btn"
                             scope="public_profile,email"
