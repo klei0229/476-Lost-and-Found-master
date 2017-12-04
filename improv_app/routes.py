@@ -93,6 +93,9 @@ def chatroom():
 def chatroom_video():
 	return render_template("chatroomvideo.html")
 
+@app.route("/yuhao_test")
+def yh_test():
+    return render_template("yuhao_test.html")
 
 if __name__ == "__main__":
 	app.run(debug=True)
