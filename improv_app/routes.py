@@ -13,6 +13,10 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://jfgrougikqidof:1fe420ca8edb7
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://wfibcqxjvbzada:5ea7dff6b2fd7aa8add4fc96326defc8eadbb2a34661e1304a3de08053817567@ec2-54-235-90-125.compute-1.amazonaws.com:5432/d6s3p8sri4ie30'
 
 
+# Yu Hao repo
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://bnyzbaqdwqypbf:d0588f108aa8f33ee3d4700bc38c71668c0be639960247a7930c2933ef5801f9@ec2-50-19-86-17.compute-1.amazonaws.com:5432/d2gvs5fsf3vs0p'
+
+
 
 #secretkey for login
 app.secret_key = 'development-key'
@@ -101,6 +105,9 @@ def chatroom():
 def chatroom_video():
 	return render_template("chatroomvideo.html")
 
+@app.route("/yuhao_test")
+def yh_test():
+    return render_template("yuhao_test.html")
 
 if __name__ == "__main__":
 	app.run(debug=True)

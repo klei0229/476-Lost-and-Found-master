@@ -2,119 +2,32 @@
 <html >
 <head>
   <meta charset="UTF-8">
+  <!-- title of website-->
   <title>Improv Chatroom</title>
 
-
+<!-- link to different stylesheet-->
 <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
 <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
 
 <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic'>
 <link rel="stylesheet" type="text/css" href="static/css/layout.css">
 </head>
-<body>
-  <head>
-    <title>Improv Chatroom</title>
-</head>
 
 <body>
-
-  <!-- facebook code -->
-<script>
-
- /*initialize facebook object with app id and version #*/
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '1889516257744521',
-          cookie     : true,
-          xfbml      : true,
-          version    : 'v2.11'
-        });
-
-        FB.getLoginStatus(function(response) {
-            statusChangeCallback(response);
-        });
-      };
-
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=1889516257744521";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-
-       function statusChangeCallback(response){
-         if(response.status === 'connected'){
-           console.log('Logged in and authenticated');
-           setElements(true);
-           testAPI();
-         } else {
-           console.log('Not authenticated');
-           setElements(false);
-         }
-       }
-
-      function checkLoginState() {
-        FB.getLoginStatus(function(response) {
-          statusChangeCallback(response);
-        });
-      }
-
-      function testAPI(){
-        FB.api('/me?fields=name,email', function(response){
-          if(response && !response.error){
-            //console.log(response);
-            //buildProfile(response);
-          }
-
-          FB.api('/me/feed', function(response){
-            if(response && !response.error){
-              //buildFeed(response);
-            }
-          });
-        })
-      }
-
-      function logout(){
-        FB.logout(function(response){
-          setElements(false);
-          console.log("User has logged out")
-        });
-      }
-
-      function setElements(isLoggedIn){
-        if(isLoggedIn){
-          document.getElementById('logout').style.display = 'block';
-          document.getElementById('fb-btn').style.display = 'none';
-        } else {
-          document.getElementById('logout').style.display = 'none';
-          document.getElementById('fb-btn').style.display = 'block';
-
-        }
-      }
-
-
-<!--  -->
-
-
-
-</script>
-
-
-
-
-
 
 	<div>
+    <!-- use bootstrap to build the navbar-->
   <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
    <div class="container topnav">
    <div class="navbar-header">
+  <!-- useless stuff
    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-
    </button>
+ -->
+ <!-- ttitle of the page -->
    <a class="navbar-brand topnav" target="_blank">Improv Chatroom</a>
             </div>
-
+  <!-- different thigns in navbar, using the list-->
    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
@@ -129,12 +42,12 @@
                    <li>
                         <a href="#User Profile">User Profile</a>
                     </li>
-                    
+                    <!--condiiton- when user is logged in-->
                     {% if userLoggedIn %}
                       <li>
                           <a href="{{url_for('logout')}}">Log out</a>
                       </li>
-
+                    <!-- if user did not login yet-->
                     {% else  %}
 
                       <li>
@@ -145,26 +58,14 @@
 
                     {% if userLoggedIn %}
 
-
+                    <!-- direct to signup page-->
                     {% else  %}
 
                       <li>
                           <a href="{{url_for('signup')}}">Sign up</a>
                       </li>
 
-
-                      <li>
-                          <li><a id="logout" href="#" onclick="logout()">Logout</a></li>
-                          <fb:login-button
-                            id="fb-btn"
-                            scope="public_profile,email,publish_actions,publish_pages,manage_pages"
-                            onlogin="checkLoginState();">
-                          </fb:login-button>
-                      </li>
-
-
-                    {% endif %}                      
-
+                    {% endif %}
 
                 </ul>
             </div>

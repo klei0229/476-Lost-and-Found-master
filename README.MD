@@ -15,7 +15,9 @@ second: run py.test or pytest, either of them work!
 Solution is install blinker by using pip)
 
 Deploy Using Heroku:
-https://limitless-island-91246.herokuapp.com/create
+https://sleepy-ocean-33059.herokuapp.com/
+add /chatroom for the chatroom page
+add /chatroom_video for the video page
 
 Warning: to add/change new style in external file, don't be worried about if the page
 didn't make any change. You need to refresh the css file in website in order make it work in html,
