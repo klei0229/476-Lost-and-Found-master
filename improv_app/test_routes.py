@@ -20,5 +20,5 @@ class improv_test(MyTest):
         self.client.get('/search')
         self.assert_template_used('search.html')
     def test_chat_page(self):
-        self.client.get('/session')
+        self.client.get('/chatroom')
         self.assert_template_used('chatroom.html')
