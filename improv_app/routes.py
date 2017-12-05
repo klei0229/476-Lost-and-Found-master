@@ -21,10 +21,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://jfgrougikqidof:1fe420ca8edb7
 #secretkey for login
 app.secret_key = 'development-key'
 
-@app.route("/")
-def index():
-    return render_template("index.html")
-
 
 @app.route("/")
 def index():
