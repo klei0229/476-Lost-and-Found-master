@@ -1,1 +1,2 @@
-web: bin/runsvdir-dyno
+web: gunicorn improv_app:app
+node: node server.js
