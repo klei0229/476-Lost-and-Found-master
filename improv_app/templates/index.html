@@ -3,15 +3,12 @@ Code for home page
 -->
 
 {% extends "layout.html" %}
-
 {% block content %}
 <!-- the link that only link to the home page-->
 <head>
 	<link rel="stylesheet" type="text/css" href="static/css/home.css">
 </head>
-
 <!--The div for the title of the page-->
-<body>
 <a name="home"></a>
 <div class="intro-header">
 	<div class="bg-overlay">
@@ -29,7 +26,8 @@ Code for home page
 	</div>
 </div>
 <!--the div for user to select the watch selection-->
-<section id="Watch" class="SC_body">
+<a  name="Watch"></a>
+<section id="Watch" class="bg-light-gray bounds">
 	<div class="bg-overlay">
 		<div class="container">
 				<div class="row">
@@ -41,7 +39,7 @@ Code for home page
 				</div>
 				<!-- div for the conent of stand-up comedy -->
 				<div class="row">
-						<div class="col-md-6 col-sm-6 portfolio-item">
+						<div class="col-md-4 col-sm-6 portfolio-item">
 								<div class="portfolio-hover">
 										<div class="portfolio-hover-content">
 										</div>
@@ -50,11 +48,7 @@ Code for home page
 								<div class="portfolio-caption">
 										<h4>Watch others live and join right now</h4>
 										<p id="small-text" class="text-muted">Prompts and topics will be randomly provided.</p>
-										<form id="frm1">
-										  Room Name:<input type="text"><br>
-										</form>
-										<button onclick="RoomName()" class="btn btn-primary">Join</button>
-										<p id="demo"></p>
+										<img src="/static/img/improv_watch.jpg" alt="Watch Improv" height="300" width="350">
 								</div>
 						</div>
 						<div class="col-md-4 col-sm-6 portfolio-item portfolio2">
@@ -65,22 +59,36 @@ Code for home page
 
 								<!-- -->
 								<div class="portfolio-caption">
-										<h4>Create A Room</h4>
-										<h4>Interact with your friends</h4>
-										<p id="small-text" class="text-muted">Prompts and topics will be randomly provided.</p>
-										<button onclick="myFunction()" class="btn btn-primary">Create</button>
+									<h4>Create A Session: Create a new room where others can join and perform with you collaboratively</h4>
+									<p id="small-text" class="text-muted">Prompts and topics will be randomly provided.</p>
+									<a href="https://improvproject2.herokuapp.com"><img src="/static/img/improv_create.jpg" alt="Create Improv" height="300" width="350"></a>
 								</div>
 						</div>
+
+						<div class="col-md-4 col-sm-6 portfolio-item">
+										<div class="portfolio-hover">
+												<div class="portfolio-hover-content">
+
+												</div>
+										</div>
+								<div class="portfolio-caption">
+									<h4>Look Through Old Sessions</h4>
+									<h4>Watch Others: Interact with others by watching other user's live session, give feedback and leave comments</h4>
+										<p id="small-text" class="text-muted">Prompts and topics will be randomly provided.</p>
+										<img src="/static/img/improv_old.jpg" alt="Watch Improv" height="300" width="350">
+								</div>
+						</div>
+
 				</div>
 		</div>
 </section>
-<!-- Remove because we do not have enought time to make this feature
+
 <a  name="Watch"></a>
-<section id="Watch" class="bg-light-gray bounds">
+<section class="TA_body">
 		<div class="container">
 				<div class="row">
 						<div class="col-lg-12 text-center">
-								<h2 class="section-heading">Threatre Acting</h2>
+								<h2 class="TA_title">Threatre Acting</h2>
 								<h3 id="below-section" class="section-subheading text-muted">Perform with others</h3>
 						</div>
 				</div>
@@ -136,7 +144,5 @@ Code for home page
 				</div>
 		</div>
 </section>
--->
-<script src="static/js/home.js"></script>
-</body>
+
 {% endblock %}
