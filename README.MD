@@ -15,7 +15,7 @@ second: run py.test or pytest, either of them work!
 Solution is install blinker by using pip)
 
 Deploy Using Heroku:
-https://sleepy-ocean-33059.herokuapp.com/
+http://improvproject.herokuapp.com/
 add /chatroom for the chatroom page
 add /chatroom_video for the video page
 
