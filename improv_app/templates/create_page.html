@@ -1,24 +1,35 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<!-- page for creating room: we are not useing this since, the video and chatroom is in node.js-->
 <head>
+  <!-- link to the css-->
   <link rel="stylesheet" type="text/css" href="static/css/create.css">
 </head>
+<!--div for the title part-->
 <div class="create_title_body">
+  <!--the title -->
   <h1 class="create_title"> Stand-Up Comedy</h1>
+  <!-- instruction-->
   <div class="stand_description">
       <p>Description of how stand-up comedy sessions work</p>
   </div>
 </div>
+<!-- create page body-->
 <div class="create_body">
+  <!-- title for body -->
   <h3 class="room_title">Room Options</h3>
   <div class="room_body">
+    <!-- form for setting to create a room -->
     <form>
       <div class="input-group" id="lobby">
+        <!-- room name input -->
         <span class="input-group-addon">Lobby Name</span>
         <input id="lobby_name" type="text" class="form-control" name="google"/>
       </div>
+      <!-- div for properties of room -->
       <div class="form-inline select_time">
+        <!-- selection box for time duration -->
         <label class="time_name">Time Duration(min):</label>
         <select class="form-control" id="sel1">
           <option>5</option>
@@ -27,19 +38,24 @@
           <option>20</option>
         </select>
       </div>
+    <!--div for room authorization-->
         <div class="form-inline room_type">
           <labe class ="room_type_name">Room Type:</label>
           <select class="form-control" id="sel1">
+            <!--two optionss-->
             <option>Public</option>
             <option>Private</option>
           </select>
         </div>
     </from>
+    <!-- type of room -->
     <div class="c_box">
+      <!-- options -->
     <label class="checkbox-inline"><input type="checkbox" value="">Voice</label>
     <label class="checkbox-inline"><input type="checkbox" value="">Camera</label>
     <label class="checkbox-inline"><input type="checkbox" value="">Text</label>
     </div>
+    <!-- a button link to chatroom page-->
     <a href="{{url_for('chatroom_video')}}"><button type="button" class="btn btn-primary create_button">Create</button></a>
 </div>
   <script src="static/js/create.js"></script>
