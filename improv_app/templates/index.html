@@ -50,6 +50,11 @@ Code for home page
 								<div class="portfolio-caption">
 										<h4>Watch others live and join right now</h4>
 										<p id="small-text" class="text-muted">Prompts and topics will be randomly provided.</p>
+										<form id="frm1">
+										  Room Name:<input type="text" name="fname" value="Donald"><br>
+										</form>
+										<button onclick="myFunction()" class="btn">Join</button>
+										<p id="demo"></p>
 								</div>
 						</div>
 						<div class="col-md-4 col-sm-6 portfolio-item portfolio2">
@@ -62,8 +67,8 @@ Code for home page
 								<div class="portfolio-caption">
 										<h4>Create A Room</h4>
 										<h4>Interact with your friends</h4>
-
 										<p id="small-text" class="text-muted">Prompts and topics will be randomly provided.</p>
+										<a href="#">Create</a>
 								</div>
 						</div>
 				</div>
@@ -132,5 +137,6 @@ Code for home page
 		</div>
 </section>
 -->
+<script src="static/js/create.js"></script>
 </body>
 {% endblock %}
