@@ -1,8 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-    <head>
-        <style>
-
+<!-- a failed test on video and chatroom -->
 <head>
   <link rel="stylesheet" type="text/css" href="static/css/chatroom.css">
     <title>Chatroom</title>
@@ -10,8 +8,6 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
     <body>
-
-
     <div class="streamer_info">
       <h1>Improv Acting Session 1</h1>
       <h4>Current Prompt Place Holder<h4>
@@ -34,24 +30,8 @@
           <h2>Actor 1: </h2>
           <video id="localVideo" autoplay></video>
           <video id="remoteVideo" autoplay></video>
-
-
-
-
   <script src="../static/js/video.js"></script>
   <script src="../static/js/adapter.js"></script>
-
-
-	<div class="wrapper">
-
-footer {
-    text-align: center;
-}
-
-        </style>
-        <link rel="stylesheet" type="text/css" href="static/css/chatroom.css">
-    </head>
-    <body>
         <div class="wrapper">
 
             <div class="banner">
@@ -83,7 +63,7 @@ footer {
                 <input type="button" value="OK" id="loginBtn" />
             </div>
         </div>
-    <script src="/socket.io/socket.io.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
         <script src="scripts/chatroom.js"></script>
     </body>
     {% endblock %}
