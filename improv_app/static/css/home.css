@@ -31,7 +31,6 @@
 h2.section-heading {
     font-size: 3em;
     color: rgba(0, 0, 0, 0.9);
-    color:white;
 }
 
 
@@ -205,5 +204,7 @@ p.copyright {
   background-image: url("/static/img/TA_background.jpg");
 }
 .TA_title {
+  font-size: 3em;
+  color: rgba(0, 0, 0, 0.9);
   color:white;
 }
