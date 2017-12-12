@@ -14,9 +14,9 @@
   <h3 class="room_title">Room Options</h3>
   <div class="room_body">
     <form>
-      <div class="input-group lobby">
+      <div class="input-group" id="lobby">
         <span class="input-group-addon">Lobby Name</span>
-        <input id="msg" type="text" class="form-control" name="msg">
+        <input id="lobby_name" type="text" class="form-control" name="google"/>
       </div>
       <div class="form-inline select_time">
         <label class="time_name">Time Duration(min):</label>
@@ -28,7 +28,7 @@
         </select>
       </div>
         <div class="form-inline room_type">
-          <labe class ="room_name"l>Room Type:</label>
+          <labe class ="room_type_name">Room Type:</label>
           <select class="form-control" id="sel1">
             <option>Public</option>
             <option>Private</option>
@@ -42,4 +42,5 @@
     </div>
     <a href="{{url_for('chatroom_video')}}"><button type="button" class="btn btn-primary create_button">Create</button></a>
 </div>
+  <script src="static/js/create.js"></script>
 {% endblock %}

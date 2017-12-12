@@ -1,3 +1,27 @@
 {% extends "layout.html" %}
 {% block content %}
+<body><head>
+  <link rel="stylesheet" type="text/css" href="static/css/create.css">
+</head>
+<div class="create_title_body">
+  <h1 class="create_title"> Stand-Up Comedy</h1>
+  <div class="stand_description">
+      <p>Description of how stand-up comedy sessions work</p>
+  </div>
+</div>
+<div class="create_body">
+  <h3 class="room_title">Room Options</h3>
+<form id="frm1">
+  First name: <input type="text" name="fname" value="Donald"><br>
+  Last name: <input type="text" name="lname" value="Duck"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>Click "Try it" to display the value of each element in the form.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+  <script src="static/js/create.js"></script>
+</body>
 {% endblock %}

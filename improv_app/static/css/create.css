@@ -34,7 +34,7 @@
     width: 18%;
     margin-left: 19%;
   }
-  .lobby {
+  #lobby {
     position: relative;
     top:25px;
   }
@@ -55,7 +55,7 @@
     top: 200px;
     left:275px;
   }
-  .room_name, .time_name  {
+  .room_type_name, .time_name  {
     font-size: 18px;
     font-family: avenir next;
   }
