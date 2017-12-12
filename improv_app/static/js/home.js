@@ -1,4 +1,4 @@
-function myFunction() {
+function RoomName() {
     var x = document.getElementById("frm1");
     var text = "";
     var i;

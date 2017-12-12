@@ -22,3 +22,9 @@ class improv_test(MyTest):
     def test_chat_page(self):
         self.client.get('/chatroom')
         self.assert_template_used('chatroom.html')
+    def test_video_page(self):
+        self.client.get('/chatroom_video')
+        self.assert_template_used('chatroomvideo.html')
+    def test_test_page(self):
+        self.client.get('/yuhao_test')
+        self.assert_template_used('yuhao_test.html')
