@@ -171,7 +171,9 @@ section {
     }
 }
 
-
+.SC_section {
+  height: 833px;
+}
 
     ul.banner-social-buttons > li {
         display: block;
@@ -200,11 +202,10 @@ p.copyright {
   height: 400px;
 }
 .TA_body {
-  height: 600px;
-  background-image: url("/static/img/TA_background.jpg");
+  height: 800px;
+  position: relative;
+  bottom:83px;
 }
-.TA_title {
-  font-size: 3em;
-  color: rgba(0, 0, 0, 0.9);
-  color:white;
+.TA_container {
+  margin-top: 20px;
 }
