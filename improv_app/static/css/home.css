@@ -3,11 +3,11 @@
     padding-bottom: 50px;
     text-align: center
     background-size: cover;
-    height: 600px;
+    height: 700px;
 }
 .bg-overlay {
   background:rgba(0,0,0, 0.3);
-  height: 600px;
+  height: 700px;
 }
 
 .intro-message {
@@ -31,6 +31,7 @@
 h2.section-heading {
     font-size: 3em;
     color: rgba(0, 0, 0, 0.9);
+    color:white;
 }
 
 
@@ -198,4 +199,11 @@ p.copyright {
 }
 .SC_body {
   height: 400px;
+}
+.TA_body {
+  height: 600px;
+  background-image: url("/static/img/TA_background.jpg");
+}
+.TA_title {
+  color:white;
 }
