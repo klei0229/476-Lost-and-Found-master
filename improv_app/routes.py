@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request, session, redirect, url_for
+from flask import Flask, render_template, request, session, redirect, url_for
 from .forms import SignupForm, LoginForm
 from .models import db, User
 from . import app
@@ -109,7 +109,7 @@ def chatroom():
 @app.route("/chatroom_video")
 def chatroom_video():
 	return render_template("chatroomvideo.html")
-# router to test.html 
+# router to test.html
 @app.route("/yuhao_test")
 def yh_test():
     return render_template("yuhao_test.html")
