@@ -36,6 +36,24 @@ color: #000;
 .AboutUs {
   height: 200px;
   position: relative;
-  bottom:103px;
+  bottom:83px;
   background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+.link_aboutus:hover {
+  text-decoration: none;
+  color: black;
+}
+.AboutUs a:hover {
+  text-decoration: none;
+}
+.link_aboutus{
+    color: white;
+}
+.aboutus_title {
+  display: inline-block;
+  font-size: 100px;
+}
+.github_icon {
+  color: black;
 }
