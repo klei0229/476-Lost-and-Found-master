@@ -13,7 +13,12 @@ body {
 }
 /* The page for instruction information*/
 .help {
+    /* same change below for more space */
     height: 600px;
     text-align: center;
-    background: rgba(0,0,0, 0.3);
+    background: rgba(0,0,0, 0.2);
+}
+.AboutUs {
+  position: relative;
+  bottom: 0px;
 }
