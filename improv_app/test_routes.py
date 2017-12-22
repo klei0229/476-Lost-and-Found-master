@@ -28,3 +28,6 @@ class improv_test(MyTest):
     def test_test_page(self):
         self.client.get('/yuhao_test')
         self.assert_template_used('yuhao_test.html')
+    def test_about_page(self):
+        self.client.get('/aboutus')
+        self.assert_template_used('aboutus.html')
