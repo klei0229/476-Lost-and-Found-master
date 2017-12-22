@@ -1,22 +1,29 @@
+<!-- page for login -->
 {% extends "layout.html" %}
 
 {%block content%}
+<head>
+	<link rel="stylesheet" type="text/css" href="static/css/login.css">
+</head>
 <main class = "container signup-section">
-	<div class = "section-content">
-		<h2>Log in </h2>
+	<!-- body of login -->
+	<div class = "section-content login_body">
+		<!-- title -->
+		<h2>Login</h2>
+		<!-- div for from of login -->
 		<form method = "POST" action="/login">
 			{{form.hidden_tag()}}
-
-			<div class="form-group">
+			<!-- email (username)-->
+			<div class="form-group username_div">
 				{{form.email.label}}
 				{{form.email}}
 			</div>
-
-			<div class="form-group">
+			<!--password-->
+			<div class="form-group password_div">
 				{{form.password.label}}
 				{{form.password}}
 			</div>
-
+			<!--submit-->
 			{{ form.submit(class="btn-primary")}}
 
 

@@ -3,11 +3,11 @@
     padding-bottom: 50px;
     text-align: center
     background-size: cover;
-    height: 700px;
+    height: 833px;
 }
 .bg-overlay {
   background:rgba(0,0,0, 0.3);
-  height: 700px;
+  height: 833px;
 }
 
 .intro-message {
@@ -171,7 +171,9 @@ section {
     }
 }
 
-
+.SC_section {
+  height: 833px;
+}
 
     ul.banner-social-buttons > li {
         display: block;
@@ -197,14 +199,13 @@ p.copyright {
     margin: 15px 0 0;
 }
 .SC_body {
-  height: 400px;
+  height: 966px;
 }
 .TA_body {
-  height: 600px;
-  background-image: url("/static/img/TA_background.jpg");
+  height: 700px;
+  position: relative;
+  bottom:83px;
 }
-.TA_title {
-  font-size: 3em;
-  color: rgba(0, 0, 0, 0.9);
-  color:white;
+.TA_container {
+  margin-top: 20px;
 }

@@ -32,3 +32,10 @@ color: #000;
   background: rgba(28, 28, 28, 0.0);
   color: #000;
 }
+
+.AboutUs {
+  height: 200px;
+  position: relative;
+  bottom:103px;
+  background: rgba(0, 0, 0, 0.6);
+}

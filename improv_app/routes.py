@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request, session, redirect, url_for
+from flask import Flask, render_template, request, session, redirect, url_for
 from .forms import SignupForm, LoginForm
 from .models import db, User
 from . import app
@@ -21,48 +21,56 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://jfgrougikqidof:1fe420ca8edb7
 #secretkey for login
 app.secret_key = 'development-key'
 
-
+# router to home page
 @app.route("/")
 def index():
     return render_template("index.html")
 
-
+# router to singup page
 @app.route("/signup", methods=['GET', 'POST'])
 def signup():
 	form = SignupForm()
+    # based on the method do different stuff
 	if request.method == "POST":
+        # if the form is false, it go to signup html again
 		if form.validate() == False:
 			return render_template('signup.html', form = form)
 		else:
-
+            # when form is true, create a new user
 			newuser = User(form.first_name.data,
 						   form.last_name.data,
 						   form.email.data,
 						   form.password.data)
-
+            # add user into database
 			db.session.add(newuser)
 			db.session.commit()
 
 			session['email'] = form.email.data
-
+            # return to index.html
 			return redirect(url_for('index'))
+        # if method is get, return signup
 	elif request.method =="GET":
 		return render_template('signup.html', form = form)
 
-
+# router to create page
 @app.route("/create")
 def create_page():
 	return render_template("create_page.html")
 
 
-
+# router to login page with different methods
 @app.route("/login" , methods = ["GET" , "POST"])
 def login():
+    # get the login form
 	form = LoginForm()
+    # if the method is post
 	if request.method == "POST":
+        # check if it is correct
 		if form.validate() == False:
+            # return login if it is false
 			return render_template("login.html" , form = form)
 		else:
+            # when it is true, check the database
 			email = form.email.data
 			password = form.password.data
 			user = User.query.filter_by(email=email).first()
@@ -71,37 +79,43 @@ def login():
 				#return redirect(url_for('home'))
 				return render_template('index.html',userLoggedIn = True)
 			else:
+                # esle return log in
 				return redirect(url_for('login'))
+            # if method is get
 	elif request.method == 'GET':
+        # go to login page
 		return render_template('login.html', form= form)
 
 
-
+# router to logout
 @app.route("/logout")
 def logout():
 	session.pop('email',None)
 	return redirect(url_for('index'))
 
 
-
+# router to search
 @app.route("/search")
 def browse():
 	return render_template("search.html")
 
 
 
-
+# router to chatroom
 @app.route("/chatroom")
 def chatroom():
 	return render_template("chatroom.html")
-
+# router to chatroom_video
 @app.route("/chatroom_video")
 def chatroom_video():
 	return render_template("chatroomvideo.html")
-
+# router to test.html
 @app.route("/yuhao_test")
 def yh_test():
     return render_template("yuhao_test.html")
-
+#router to aboutus page
+@app.route("/aboutus")
+def aboutus():
+    return render_template("aboutus.html")
 if __name__ == "__main__":
 	app.run(debug=True)

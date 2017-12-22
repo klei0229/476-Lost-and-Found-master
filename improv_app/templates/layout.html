@@ -53,7 +53,7 @@
                       <li>
                           <a href="{{url_for('login')}}">Log in</a>
                       </li>
-                      
+
                     {% endif %}
 
                     {% if userLoggedIn %}
@@ -74,5 +74,8 @@
 	</div>
 		{% block content %}
 		{% endblock %}
+    <div class="AboutUs">
+        <a href="{{url_for('aboutus')}}"><h2>About Us</h2></a>
+    </div>
 	</body>
 </html>
