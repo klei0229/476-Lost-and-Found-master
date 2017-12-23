@@ -50,3 +50,13 @@ class TestImprovHome(unittest.TestCase):
                          headings3[7].text.strip())
         self.assertEqual("Browse Archive: Look through past performances that have been archived",
                          headings3[8].text.strip())
+    def test_p(self):
+        p = self.soup.find_all('p')
+        self.assertEqual("Prompts and topics will be randomly provided.",
+                         p[0].text.strip())
+        self.assertEqual("Prompts and topics will be randomly provided.",
+                         p[1].text.strip())
+        self.assertEqual("Prompts and topics will be randomly provided.",
+                         p[2].text.strip())
+        self.assertEqual("About Us",
+                         p[3].text.strip())
