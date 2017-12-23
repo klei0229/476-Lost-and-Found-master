@@ -61,9 +61,16 @@ class TestImprovHome(unittest.TestCase):
         self.assertEqual("About Us",
                          p[3].text.strip())
     def test_a(self):
-        links = self.soup.find_all('a')
-        a = ['Improv Chatroom','Home', 'Watch', 'Create', 'User Profile', 'Log in', 'Sign up','' ,'' , 'About Us','']
+        a = self.soup.find_all('a')
+        temple = ['Improv Chatroom','Home', 'Watch', 'Create', 'User Profile', 'Log in', 'Sign up','' ,'' , 'About Us','']
         i = 0
-        for x in links:
-            self.assertEqual(a[i],x.text.strip())
+        for x in a:
+            self.assertEqual(temple[i],x.text.strip())
+            i = i + 1
+
+    def test_a_href(self):
+        links = ["/","/search","https://improvproject2.herokuapp.com/","#User Profile","/login","/signup","https://improvproject2.herokuapp.com","/aboutus","https://github.com/klei0229/476-Improv-Chatroom-master"]
+        i = 0
+        for a in self.soup.find_all('a', href=True):
+            self.assertEqual(links[i],a['href'])
             i = i + 1
