@@ -53,7 +53,7 @@
                       <li>
                           <a href="{{url_for('login')}}">Log in</a>
                       </li>
-                      
+
                     {% endif %}
 
                     {% if userLoggedIn %}
@@ -74,5 +74,9 @@
 	</div>
 		{% block content %}
 		{% endblock %}
+    <div class="AboutUs">
+        <a class="link_aboutus" href="{{url_for('aboutus')}}"><p class="aboutus_title">About Us</p></a>
+        <a class="link_github" href="https://github.com/klei0229/476-Improv-Chatroom-master"><i class="fa fa-github github_icon" style="font-size:24px"></i></a>
+    </div>
 	</body>
 </html>

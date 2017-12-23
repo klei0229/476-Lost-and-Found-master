@@ -1,0 +1,24 @@
+body {
+  background:rgba(0,0,0, 0.1);
+}
+/* The style of about us section*/
+.infor_aboutus {
+  margin-top: 60px;
+  /* more space change this size */
+  height: 600px;
+  text-align: center;
+}
+.page_aboutus_title, .instruction{
+  font-size: 100px;
+}
+/* The page for instruction information*/
+.help {
+    /* same change below for more space */
+    height: 600px;
+    text-align: center;
+    background: rgba(0,0,0, 0.2);
+}
+.AboutUs {
+  position: relative;
+  bottom: 0px;
+}
