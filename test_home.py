@@ -60,3 +60,10 @@ class TestImprovHome(unittest.TestCase):
                          p[2].text.strip())
         self.assertEqual("About Us",
                          p[3].text.strip())
+    def test_a(self):
+        links = self.soup.find_all('a')
+        a = ['Improv Chatroom','Home', 'Watch', 'Create', 'User Profile', 'Log in', 'Sign up','' ,'' , 'About Us','']
+        i = 0
+        for x in links:
+            self.assertEqual(a[i],x.text.strip())
+            i = i + 1
