@@ -10,14 +10,27 @@ Second: python application.py
 
 To Run the Test:
 First: Install pytest
-second: run py.test or pytest, either of them work!
+second: run pytest to see all the test cases
+        or run pytest *****.py to verify on each individual test python
 (notes: someone may received error of version problem of flask that related to blinker.
 Solution is install blinker by using pip)
+The totals cases: 51 unit tests. However, this is the total numbers because
+51 represents 51 functions. However, some cases I used for loops.
+test_exsitance_css has 9
+test_existance_templates has 12
+test_existance has 14
+test_home has 40
+test_routes has 8
+Total assertions we had is 83 assertions
 
 Deploy Using Heroku:
-http://improvproject.herokuapp.com/
-add /chatroom for the chatroom page
-add /chatroom_video for the video page
+http://improvproject.herokuapp.com/ --- main
+http://improvproject2.herokuapp.com/ --- node.js for video and chatroom
+
+
+Contributor github:
+https://github.com/LiuYuHao/476-Improv-Chatroom-master
+https://github.com/yejack/476-Improv-Chatroom-master
 
 Warning: to add/change new style in external file, don't be worried about if the page
 didn't make any change. You need to refresh the css file in website in order make it work in html,
