@@ -40,10 +40,12 @@ class Test_exstance (unittest.TestCase):
         file_exits = op.exists(op.join(self.dir,
                           'test_home.py'))
         self.assertTrue(file_exits)
+    # test for test python of html file
     def test_check_improve_app_test_html_file(self):
         file_exits = op.exists(op.join(self.dir,
                           'test_existance_templates.py'))
         self.assertTrue(file_exits)
+    # test for existance of css test python
     def test_check_improve_app_test_css_file(self):
         file_exits = op.exists(op.join(self.dir,
                           'test_exsitance_css.py'))
