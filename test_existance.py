@@ -34,3 +34,34 @@ class Test_exstance (unittest.TestCase):
         file_exits = op.exists(op.join(self.dir,
                           'test_home.py'))
         self.assertTrue(file_exits)
+    def test_check_improve_app_init_file(self):
+        file_exits = op.exists(op.join(self.dir,
+                          'improv_app',
+                          '__init__.py'))
+        self.assertTrue(file_exits)
+
+    def test_check_improve_app_chatroom_file(self):
+        file_exits = op.exists(op.join(self.dir,
+                          'improv_app',
+                          'chatroom_manager.py'))
+        self.assertTrue(file_exits)
+    def test_check_improve_app_forms_file(self):
+        file_exits = op.exists(op.join(self.dir,
+                          'improv_app',
+                          'forms.py'))
+        self.assertTrue(file_exits)
+    def test_check_improve_app_models_file(self):
+        file_exits = op.exists(op.join(self.dir,
+                          'improv_app',
+                          'models.py'))
+        self.assertTrue(file_exits)
+    def test_check_improve_app_route_file(self):
+        file_exits = op.exists(op.join(self.dir,
+                          'improv_app',
+                          'routes.py'))
+        self.assertTrue(file_exits)
+    def test_check_improve_app_test_routes_file(self):
+        file_exits = op.exists(op.join(self.dir,
+                          'improv_app',
+                          'test_routes.py'))
+        self.assertTrue(file_exits)
