@@ -65,3 +65,11 @@ class Test_exstance (unittest.TestCase):
                           'improv_app',
                           'test_routes.py'))
         self.assertTrue(file_exits)
+    def test_check_improve_app_test_html_file(self):
+        file_exits = op.exists(op.join(self.dir,
+                          'test_existance_templates.py'))
+        self.assertTrue(file_exits)
+    def test_check_improve_app_test_css_file(self):
+        file_exits = op.exists(op.join(self.dir,
+                          'test_exsitance_css.py'))
+        self.assertTrue(file_exits)
